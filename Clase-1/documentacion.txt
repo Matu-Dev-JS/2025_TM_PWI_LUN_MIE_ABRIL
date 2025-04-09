@@ -1,0 +1,53 @@
+Todas las paginas se escriben en html
+
+HTML = Lenguaje de marcado de hipertexto
+
+Elementos:
+DIV
+A
+INPUT
+
+Etiqueta:
+<nombre_elemento>
+
+
+La etiqueta es la palabra el elemento es el significado de la palabra
+
+hola
+chau
+
+EN Html hay una regla que es que todo debe ser retrocompatible, 
+es decir solo se pueden sumar cosas pero jamas o muy rara vez ELIMINAR
+
+
+Esto es hasta HTML4:
+
+HAY 2 TIPOS DE ETIQUETAS:
+
+El tipo de etiqueta esta determinado por el elemento
+Las de autocierre
+<input/>
+A partir de la version 5 de HTML se puede escribir las etiquetas de autocierre:
+<input>
+
+Y las normales o de cierre (close tag)...
+<div><input/></div>
+<a></a>
+
+
+Hay 2 tipos de atributos, globales y definidos
+Cada etiqueta puede tener atributos:
+Los atributos dependen del elemento
+ 
+Sirven para configurar propiedades de dicha etiqueta
+
+Se escriben asi:
+
+El atributo es ID
+<div id='pepe' ></div>
+
+Cada atributo puede tener un valor
+
+El valor del atributo id es pepe
+<div id='pepe' ></div>
+
