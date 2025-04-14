@@ -1,0 +1,28 @@
+
+Heading (Encabezados):
+Nos permiten informale al navegador sobre la importancia y tema de nuestra pagina
+<h
+
+Anidado (Nesting):
+Las etiquetas de cierre pueden anidar otras etiquetas o contenido
+
+    <contenedora><contenida><padre><hijo><nieta></nieta></hijo></padre></contenida></contenedora>
+
+Indentacion (No es una regla, pero es algo recomendado, a esto le decimos buena practica):
+
+    <contenedora>
+		<contenida>
+			<padre>
+				<hijo>
+					<nieta>
+					</nieta>
+				</hijo>
+				<hijo>
+					<nieta>
+					</nieta>
+					<nieta>
+					</nieta>
+				</hijo>
+			</padre>
+		</contenida>
+    </contenedora>

@@ -1,0 +1,3 @@
+Guardar = Control + S
+Text wrap = Alt + Z
+Comentario = Alt + Shift + A / Control + K + C
