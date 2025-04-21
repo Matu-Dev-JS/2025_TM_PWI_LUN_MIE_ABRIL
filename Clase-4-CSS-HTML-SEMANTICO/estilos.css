@@ -1,0 +1,22 @@
+h1{
+    color: rgb(255, 255, 255); 
+    background-color: rgb(155, 80, 182); 
+    font-size: 16px;
+    height: 400px;
+    border-radius: 10px;
+}
+h2{
+    color: rgb(130, 200, 245);
+    font-size: 40px;
+}
+body{
+    background-color: rgb(121, 59, 137);
+}
+
+.chiquito{
+    font-size: 14px;
+}
+
+.texto-especial{
+    color: red;
+}
