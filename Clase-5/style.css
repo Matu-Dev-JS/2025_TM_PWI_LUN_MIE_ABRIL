@@ -1,0 +1,30 @@
+/* CSS = Cascade style sheet */
+
+/* Selector universal */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#subtitle{
+    color: red;
+}
+
+
+.title{
+    color: rgb(241, 174, 174);
+    background-color: #8a2be2;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.title--small{
+    font-size: 24px;
+}
+
+
+h2{
+    font-size: 120px;
+}
+
+
+
+/* metodologia BEM */
