@@ -1,0 +1,39 @@
+
+/* Normalizacion del css */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.padre{
+    width: 100vw; /* viewport width 100vw = 100% del ancho del viewport */
+    height: 100vh; /* viewport height */
+    background-color: greenyellow;
+    display: flex;/* Habilita las propiedades flexibles en nuestro */
+    flex-direction: column; /* Valor por defecto */
+    gap: 20px;
+
+    /* justify-content: space-between  ; *//* Acomodar a los hijos respecto al eje x */
+    /* align-items: center; */
+    /* space-between space-around space-evenly dependen de que haya un espacio sobrante */
+    padding: 0 40px;
+    justify-content: center;
+    /* 
+    ROW:
+        justify-content: horizontal
+        aling-items: vertical
+    Column:
+        justify-content: vertical
+        aling-items: horizontal
+    */
+}
+
+.hijo{
+    width: 250px;
+    height: 200px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
