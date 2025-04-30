@@ -1,0 +1,134 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+/* 
+Color principal: #673de5
+*/
+
+/* las variables de css se declaran dentro del :root y su nombre debe empezar con -- */
+/* ESTO NO ES NECESARIO PARA HACER CSS es una buena practica avanzada */
+:root{
+    --color-principal-300: #f3f4fe;
+    --color-principal-400: #d4defe;
+    --color-principal-500: #673de5;
+    --color-principal-600: #2f1c6a;
+
+    --borde-claro: 1px solid #d5dfff;
+
+}
+
+*{
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+.title-medium{
+    font-size: 36px;
+    color: var(--color-principal-600);
+    font-weight: 700;
+}
+
+.title-small{
+    font-size: 18px;
+    color: var(--color-principal-600);
+    font-weight: 700;
+}
+
+
+.text-medium{
+    font-size: 16px;
+    color: var(--color-principal-600);
+    font-weight: 400;
+}
+
+.text-small{
+    font-size: 14px;
+    color: var(--color-principal-600);
+    font-weight: 400;
+}
+
+.primary-link{
+    color: var(--color-principal-500);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn-secondary{
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-principal-500);
+    border: 2px solid var(--color-principal-500);
+    border-radius: 8px;
+    padding: 12px 48px;
+    text-decoration: none;
+}
+
+
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section__content{
+    width: 1128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Card review */
+.card-review-container{
+    display: flex;
+    flex-direction: row; 
+    margin-top: 48px;
+    margin-bottom: 24px; 
+    gap: 24px;
+}
+
+.card-review{
+    display: flex;
+    flex-direction: column;
+    border: var(--borde-claro);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card-review__header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 32px;
+    background-color: var(--color-principal-300);
+}
+
+.card-review__header img{
+    width: 64px;
+    height: 64px;
+}
+
+
+.card-review__body{
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px 40px;
+    gap: 24px;
+}
+
+.card-review__body__rating{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    color: var(--color-principal-500);
+    font-size: 18px;
+}
