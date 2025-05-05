@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.padre{
+    background-color: greenyellow;
+    height: 100vh;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.hijo{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    /* Es el valor que viene por defecto */
+    /* position: static; */
+    border-radius: 10px;
+    z-index: 20000;
+}
+
+.hijo-2{
+    background-color: red;
+    position: relative;
+    /* Al usar position relative se activan 4 propiedades
+    top Es mas importante
+    bottom es menos importante
+    left Es mas importante
+    right es menos importante
+
+    No es valido usar top y bottom a la vez ni tampoco left o right
+    */
+    /* De la parte superior de la posicion original de mi elemento me voy a mover una x cantidad de px */
+    
+    bottom: 100px;
+    right: 50px;
+    z-index: 10000;
+}

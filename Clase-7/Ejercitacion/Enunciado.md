@@ -33,6 +33,6 @@ Desarrollar desde cero la sección correspondiente a “Website migration. Made 
 ### Recomendaciones
 - Prestá especial atención a la jerarquía visual y a la armonía del diseño.
 - Intentá lograr una réplica lo más fiel posible en cuanto a estilo, espaciado y tipografía.
-- Podés utilizar íconos de bibliotecas como FontAwesome o Heroicons si no contás con los íconos originales.
+- Podés utilizar íconos de bibliotecas como bootstrap icons y en caso de no encontrar cierto icono, usa uno aleatorio.
 
 ---

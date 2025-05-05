@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--color-principal-600: #1e1345;
+--color-principal-500: #301c6b;
+--color-principal-400: #683ee6;
+--color-prinicipal-0: #ffffff;
+}
+
+/* margin bottom */
+.mb-1{
+    margin-bottom: 16px;
+}
+.mb-2{
+    margin-bottom: 24px;
+}
+.mb-3{
+    margin-bottom: 32px;
+}
+
+.mt-3{
+    margin-top: 32px;
+}
+
+
+
+.text-center{
+    text-align: center;
+}
+
+.section{
+    background-color: var(--color-principal-600);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+}
+
+.section-content{
+    width: 1250px;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    align-items: center;
+}
+
+
+.title-medium{
+    color: var(--color-prinicipal-0);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.text-medium{
+    font-size: 16px;
+    color: var(--color-prinicipal-0);
+    font-weight: 400;
+}
+
+.text-subtitle{
+    font-size: 18px;
+    color: var(--color-prinicipal-0);
+    font-weight: 700;
+}
+
+
+.btn-primary{
+    background-color: var(--color-principal-400);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-prinicipal-0);
+    border: 2px solid var(--color-principal-400);
+    border-radius: 8px;
+    padding: 12px 48px;
+    text-decoration: none;
+}
+
+.content-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 32px;
+    background-color: var(--color-principal-500);
+   /* Flex es una propiedad de hijo (Osea que el padre de este elemento debe ser una flexbox) */
+    flex: 1; /* se dividan equitativamente el espacio */
+}
+
+/* Yo le hubiera puesto cards-container */
+.content-card-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 35px;
+    gap: 24px;
+    width: 100%;
+}
+
+.content-card__img{
+}
+
+.content-card__subtitle{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content-card__img img{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+/* .text-center{
+    text-align: center;
+}
+
+.title-medium{
+    font-size: 24px;
+    font-weight: 700;
+    color:var(--color-prinicipal-0)
+}
+
+.content-card__subtitle{
+    font-size: 18px;
+    font-weight: 400;
+    color:var(--color-prinicipal-0)
+}
+
+.text-medium{
+    font-size: 16px;
+    font-weight: 400;
+    color:var(--color-prinicipal-0)
+}
+
+
+    .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--color-principal-600);
+        padding: 80px;
+}
+
+.section-content{
+    width: 1128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-card{
+    display: flex;
+    background-color:var(--color-principal-500);
+    border-radius: 16px;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+}
+
+.content-card-container{
+    display: flex;
+    flex-direction:row;
+    gap: 24px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.content-card__img{
+padding: 24px 32px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.content-card__subtitle{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-secondary{
+    text-decoration: none;
+}
+
+.content-card_description{
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+} */
