@@ -48,11 +48,18 @@
     right: 50px;
     z-index: 10000; */
 
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    right: 0;
+    right: 0; */
 
     /* El absolute calcula su 0 0  desde la vista o desde el elemento padre mas cercano con position distinto de static */
+
+    /* No ocupa una posicion en pagina y se ajusta en la pantalla a posicion que le des */
+    /* position: fixed;
+    bottom: 16px;
+    right: 16px; */
+    position: sticky;
+    top: 100px;
 }
 
 
@@ -62,6 +69,34 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 3; */
+
+    position: sticky;
+    top:0px;
+    z-index: 3;
+}
+
+.chat{
+    background-color: black;
+    height: 600px;
+}
+
+.header-chat{
+    position: fixed;
+}
+.chat .header-chat{
+    width: 100%;
+    background-color: white;
+    color: black;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 100px;
 }
 
 .buscador-ml{
@@ -90,7 +125,8 @@ header{
     padding: 0 16px;
     height: 50%;
     color:rgb(100, 100, 100);
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
+    
 }

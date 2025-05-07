@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* DESKTOP FIRST */
+/* body{
+    background-color: red;
+}
+body h1{
+    font-size: 50px;
+} */
+
+/* 
+media queries son condiciones para css
+EJEMPLO:
+A partir de 1000px de ancho quiero que hagas cierto codigo css
+Para menos de 1000px de ancho quiero que hagas otro codigo css
+
+Reglas: Poner siempre las mediaqueries abajo!!
+*/
+/* A partir de valores inferiores a 1000px pasara x cosa */
+
+/* @media screen and (max-width: 1000px){
+    body{
+        background-color: blue;
+    }
+    body h1{
+        font-size: 16px;
+    }
+}
+ */
+
+/* MOBIBLE FIRST */
+
+
+body{
+    background-color: blue;
+}
+
+h1{
+    font-size: 16px;
+}
+
+/* A partir de los 1000px se ejecutara este codigo */
+@media screen and (min-width: 1000px) {
+    body{
+        background-color: red;
+    }
+    h1{
+        font-size: 50px;
+    }
+}
