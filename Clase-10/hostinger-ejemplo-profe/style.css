@@ -1,0 +1,211 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+/* 
+Color principal: #673de5
+*/
+
+/* las variables de css se declaran dentro del :root y su nombre debe empezar con -- */
+/* ESTO NO ES NECESARIO PARA HACER CSS es una buena practica avanzada */
+:root{
+    --color-principal-300: #f3f4fe;
+    --color-principal-400: #d4defe;
+    --color-principal-500: #673de5;
+    --color-principal-600: #2f1c6a;
+
+    --borde-claro: 1px solid #d5dfff;
+
+}
+
+*{
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+REM es una unidad que mide el font-size del html de nuestra pagina 
+1 rem = 16px
+*/
+html{
+    font-size: 16px;
+
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.265);
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    align-items: center;
+    padding: 0 24px;
+}
+header .header-left-content nav{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+header .header-left-content{
+    display: flex;
+}
+
+.btn-menu{
+    display: none;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+.title-medium{
+    /* 
+    1rem = 16px
+    2.25rem = 36px
+    */
+    font-size: 2.25rem;
+    color: var(--color-principal-600);
+    font-weight: 700;
+}
+
+.title-small{
+    font-size: 1.128rem;
+    color: var(--color-principal-600);
+    font-weight: 700;
+}
+
+
+.text-medium{
+    font-size: 1rem;
+    color: var(--color-principal-600);
+    font-weight: 400;
+}
+
+.text-small{
+    font-size: 0.875rem;
+    color: var(--color-principal-600);
+    font-weight: 400;
+}
+
+.primary-link{
+    color: var(--color-principal-500);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.btn-secondary{
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-principal-500);
+    border: 2px solid var(--color-principal-500);
+    border-radius: 8px;
+    padding: 12px 48px;
+    text-decoration: none;
+}
+
+
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section__content{
+    width: 1128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Card review */
+.card-review-container{
+    display: flex;
+    flex-direction: row; 
+    margin-top: 48px;
+    margin-bottom: 24px; 
+    gap: 24px;
+}
+
+.card-review{
+    display: flex;
+    flex-direction: column;
+    border: var(--borde-claro);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card-review__header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 32px;
+    background-color: var(--color-principal-300);
+}
+
+.card-review__header img{
+    width: 64px;
+    height: 64px;
+}
+
+
+.card-review__body{
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px 40px;
+    gap: 24px;
+}
+
+.card-review__body__rating{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    color: var(--color-principal-500);
+    font-size: 18px;
+}
+
+/* Cuando el ancho de mi pagina sea inferior a 1270px ocurrira x cosa */
+@media screen and (max-width: 1270px) {
+    html{
+        font-size: 16px;
+    }
+    .section__content{
+        width: 688px;
+    }
+    .card-review-container{
+        flex-direction: column;
+    }
+    
+    
+}
+
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+    .section__content{
+        width: 80vw;
+    }
+
+    .section{
+        padding: 0px 16px;
+    }
+    header .header-left-content nav{
+        display: none;
+    }
+    header .header-right-content{
+        display: none;
+    }
+    header .btn-menu{
+        display: flex;
+    }
+}
