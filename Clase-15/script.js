@@ -1,89 +1,65 @@
-//ARRAYS y Objetos
+//FUNCIONES
+//Guardar un bloque de codigo en memoria
+//Una funcion sin valor de retorno retorna un undefined
+//Para tener un valor de retorno usamos la palabra resevada return 
+//Podemos transmitir informacion a una funcion mediante los paramentros
 
-//ARRAY: array, lista, coleccion, arreglo
-//Los arrays nos permiten listar una serie de datos ordenados
-//Los datos dentro del array tienen un orden por indice 
-//Las indice se cuenta desde 0
-//En este caso 'pepe' tiene la indice 0 del array
-//             0        1       2
+
+//Ventajas de usar funciones:
+//Principio DRY: Dont repeat yourself
+//Separar las responsabilidades de nuestro programa
+
+
+//Declaro la funcion saludar
 /* 
-let nombres = ['pepe', 'juan', 'maria']
-
-//Los arrays pueden listar CUALQUIER tipo de dato
-let array_raro = [
-    true, 
-    0, 
-    'hola', //2
-    [
-        'hola',//0
-        'chau' //1
-    ]//3
-]
-
-//Si quiero obtener un cierto elemento de un array usare el INDICE de dicho elemento
-console.log(array_raro)
-console.log(array_raro[2])
-console.log(array_raro[3][1])
-
-
-//Los arrays tienen una propiedad interna llamada length (longitud)
-//Nos permite contar cuantos elementos hay dentro de una lista
-console.log('Hay: ' + array_raro.length + ' elementos')
-console.log('Hay: ' + nombres.length + ' nombres')
-
-
-//los string tienen un comportamiento similar al array ya que son listas de caracteres
-
-let string = 'pepe'
-console.log(string[0])
-console.log(string.length) 
+function saludar(){
+    console.log("Hola que tal!")
+} 
 */
 
-//Esto es una mala practica si se hace mal
-//No sabemos a ciencia cierta que el indice 2 es el indice de 'maria'
-//alumnos[20] = 'pedro'
 
+//invocar
+//saludar()
 
-//Metodos de array (SIMPLES)
-//let alumnos = ['pepe', 'juan', 'maria']
+//Declaracion
+function solicitarTexto (mensaje) {
+    let texto = prompt(mensaje)
+    while(!texto){
+        alert('Error: Texto no valido')
+        texto = prompt(mensaje)
+    }
+    return texto
+}
 
-//.push(): Nos permite agregar un elemento al final de la lista
-//alumnos.push('florencia')
+//Invocar
+//let retorno_de_solicitar_texto = solicitarTexto()
+//console.log(retorno_de_solicitar_texto)
+//console.log('Mira este super texto ' + texto)
 
-//.unshift(): Nos permite agregar un elemento al principio de la lista
-//alumnos.unshift('pedro')
+//Quiero solicitar el nombre y el dia favorito del usuario
+//let nombre = solicitarTexto('Dame el nombre')
+//let dia = solicitarTexto('Dame el dia')
 
-//.pop(): Elmina el ultimo elemento de una lista y lo retorna
-//let alumno_eliminado = alumnos.pop()
-//console.log(alumno_eliminado)
+//sumar que recibira 2 numeros y devolvera el resultado de la suma
 
-//.shift(): Elimina el primer elemento de una lista y lo retorna
-//alumnos.shift()
+function sumar (numero_1, numero_2){
+    return numero_1 + numero_2
+}
 
+console.log(sumar(1, 2))
+console.log(sumar(10, 20))
 
-//.includes(): nos permite saber si cierto elemento esta dentro de una lista
+//Crear una funcion llamada calcularIva que reciba el precio y retorne el IVA de dicho precio
 
-//console.log( alumnos.includes('pedro') )
+function calcularIva (precio){
+    return precio * 0.21
+}
 
+console.log(calcularIva(140000))
 
-//.indexOf(): Nos permite saber el indice de cierto elemento, nos retorna el indice del elemento buscado, si no lo encuentra retorna -1
-
-//let indice_de_pepe = alumnos.indexOf('pe')
-//console.log(indice_de_pepe)
-
-let alumnos = ['pepe', 'juan', 'maria']
-
-//.splice(): Nos permite agregar elementos a cierta posicion o eliminar elementos de cierta posicion
-
-//let posicion_de_juan = alumnos.indexOf('juan')
-//let valores_eliminados = alumnos.splice(posicion_de_juan, 1)
-//console.log(valores_eliminados)
-//console.log(alumnos)
-
-//Quiero agregar a ulises, pedrito en la posicion de juan
-
-let posicion_de_juan = alumnos.indexOf('juan')
-
-alumnos.splice(posicion_de_juan, 1, 'ulises', 'pedrito')
-
-console.log(alumnos)
+function calcularPrecioConIva (precio){
+  let total = Number(precio)*0.21+Number(precio)
+  return total
+}
+let valor_iva = calcularPrecioConIva(prompt("ingresa un precio: "))
+alert('El valor del iva es $'+ valor_iva)
