@@ -2,10 +2,10 @@
 
 let nombres = [
     'pepe', 'maria', 'juan', 'pedrito',
-    'pepe', 'maria', 'juan', 'pedrito', 
-    'pepe', 'maria', 'juan', 'pedrito', 
-    'pepe', 'maria', 'juan', 'pedrito', 
-    'pepe', 'maria', 'juan', 'pedrito', 
+    'pepe', 'maria', 'juan', 'pedrito',
+    'pepe', 'maria', 'juan', 'pedrito',
+    'pepe', 'maria', 'juan', 'pedrito',
+    'pepe', 'maria', 'juan', 'pedrito',
 ]
 
 //Quiero mandar un hola por consola a cada nombre de mi lista
@@ -123,12 +123,12 @@ let persona = {
 //Array de objetos
 let pacientes = [
     {
-        nombre:'maria',
+        nombre: 'maria',
         fecha_ingreso: '11/10/2020',
         grupo_sanguineo: 'AB'
     },
     {
-        nombre:'maria',
+        nombre: 'maria',
         fecha_ingreso: '11/10/2020',
         grupo_sanguineo: 'AB'
     },
@@ -161,7 +161,7 @@ console.log(persona_3["Numero DNI"]) */
 /* let nombre_propiedad_dni = 'Numero DNI'
 let persona_3 = {
     'Numero DNI': '44333222',
-   
+
 }
 
 console.log(persona_3[nombre_propiedad_dni]) */
@@ -173,3 +173,199 @@ console.log(persona_3[nombre_propiedad_dni]) */
 -item: (nombre, nivel, precio, id, habilidades: [(nombre, nivel_necesario)])
 
  */
+
+
+/* 
+El índice de masa corporal (IMC), o BMI por sus siglas en inglés, es un valor que determina la cantidad de grasa de una persona.
+El BMI se calcula con la siguiente formula: peso / altura^2
+Escribir una función llamada bmi que reciba dos argumentos: peso y altura, y retorne un string con las siguientes posibilidades:
+"Bajo de peso" si el BMI < 18.5
+"Normal" si está entre 18.5 y 24.9
+"Sobrepeso" si está entre 25 y 29.9
+"Obeso" si es igual o mayor a 30  
+*/
+/*
+
+if(cuenta < 18.5){
+}
+if(cuenta = 18.5 && cuenta <= 24.9){
+}
+if(cuenta < 29.9 && cuenta> 25 ){
+}
+if(cuenta >= 30){
+}
+
+
+function generarbBmi (peso, altura){
+    let bmi = peso / ( altura * altura )
+    if( cuenta < 18.5 ){
+        return "bajo de peso";
+    }
+    else{
+        if(cuenta = 18.5 && cuenta <= 24.9){
+            return "normal";
+        }
+        else{
+            if(cuenta < 29.9 && cuenta> 25 ){
+                return "sobrepeso";
+            }
+            else{
+                if(cuenta >= 30){
+                    return "obeso"
+                }
+            } 
+        } 
+    } 
+}
+    */
+
+
+
+
+/* 
+function bmi(peso, altura) {
+    let cuenta = peso / (altura, 2);
+    if (cuenta < 18.5) {
+        return "bajo de peso";
+    } else if (cuenta >= 18.5 && cuenta <= 24.9) {
+        return "normal";
+    } else if (cuenta > 24.9 && cuenta <= 29.9) {
+        return "sobrepeso";
+    } else if (cuenta >= 30) {            
+        return "obeso";
+    }  
+}
+
+*/
+
+//Dia es un numero del 1 al 7, donde 1 es lunes y 7 es domingo
+/* let numero_dia = 1
+let dia = null */
+//seleccionar 'lunes' || 'martes' || 'miercoles'...
+
+
+//IF ELSE HELL
+
+/* if (numero_dia === 1) {
+    dia = 'lunes'
+}
+else {
+    if (numero_dia === 2) {
+        dia = 'martes'
+    }
+    else {
+        if (numero_dia === 3) {
+            dia = 'miercoles'
+        }
+        else {
+            if (numero_dia === 4) {
+                dia = 'jueves'
+            }
+            else {
+                if (numero_dia === 5) {
+                    dia = 'viernes'
+                }
+                else {
+                    if (numero_dia === 6) {
+                        dia = 'sabado'
+                    }
+                    else {
+                        if (numero_dia === 7) {
+                            dia = 'domingo'
+                        }
+                    }
+                }
+            }
+        }
+    }
+} */
+
+//Para evitar el IF ELSE HELL se creo ELSE IF
+
+/* if (numero_dia === 1) {
+    dia = 'lunes'
+}
+else if (numero_dia === 2) {
+    dia = 'martes'
+}
+else if (numero_dia === 3) {
+    dia = 'miercoles'
+}
+else if (numero_dia === 4) {
+    dia = 'jueves'
+}
+else if (numero_dia === 5) {
+    dia = 'viernes'
+}
+else if (numero_dia === 6) {
+    dia = 'sabado'
+}
+else if (numero_dia === 7) {
+    dia = 'domingo'
+}
+else{
+    dia = 'invalid'
+} */
+
+
+
+/* switch(numero_dia){
+    case 1: 
+        dia = 'lunes'
+        break
+    case 2:
+        dia = 'martes' 
+        break
+    case 3: 
+        dia = 'miercoles'
+        break
+    default:
+        dia = 'invalid'
+} */
+
+
+
+/* let persona_2 = {
+    nombre: 'pepe',
+    apellido: 'suarez',
+    edad: 30
+} */
+
+/* let numero_dia = 1
+
+let dias_disponibles = {
+    '1': 'lunes',
+    '2': 'martes',
+    '3': 'miercoles',
+    '4': 'jueves',
+    '5': 'viernes',
+    '6': 'sabado',
+    '7': 'domingo',
+    x: 'hola'
+}
+
+let dia = dias_disponibles[numero_dia]
+
+console.log('El dia de hoy es ' + dia) */
+
+let numero_dia = 3
+
+let dias_disponibles = [
+    'lunes',//0
+    'martes',
+    'miercoles',
+    'jueves', //3
+    'viernes',
+    'sabado',
+    'domingo'
+]
+
+console.log( dias_disponibles )
+
+let mañana = dias_disponibles[numero_dia]
+let dia = dias_disponibles[numero_dia - 1]
+let ayer = dias_disponibles[numero_dia - 2]
+
+console.log('El dia de ayer es ' + ayer)
+console.log('El dia de hoy es ' + dia)
+console.log('El dia de mañana es ' + mañana )
