@@ -109,46 +109,46 @@ const LENGUAJES_DISPONIBLES = {
  */
 
 
-const products  =  [
+const products = [
     {
         title: 'Tv samsung 50"',
         price: 30000,
-        stock: 2, 
+        stock: 2,
         img: 'https://http2.mlstatic.com/D_NQ_NP_778558-MLA82630556218_032025-O.webp',
         description: "Tv muy buena blablabla"
     },
     {
         title: 'Tv samsung 50"',
         price: 30000,
-        stock: 2, 
+        stock: 2,
         img: 'https://http2.mlstatic.com/D_NQ_NP_778558-MLA82630556218_032025-O.webp',
         description: "Tv muy buena blablabla"
     },
     {
         title: 'Tv samsung 50"',
         price: 30000,
-        stock: 2, 
-        img: 'https://http2.mlstatic.com/D_NQ_NP_778558-MLA82630556218_032025-O.webp',
-        description: "Tv muy buena blablabla"
-    },
-     {
-        title: 'Tv samsung 50"',
-        price: 30000,
-        stock: 2, 
+        stock: 2,
         img: 'https://http2.mlstatic.com/D_NQ_NP_778558-MLA82630556218_032025-O.webp',
         description: "Tv muy buena blablabla"
     },
     {
         title: 'Tv samsung 50"',
         price: 30000,
-        stock: 2, 
+        stock: 2,
         img: 'https://http2.mlstatic.com/D_NQ_NP_778558-MLA82630556218_032025-O.webp',
         description: "Tv muy buena blablabla"
     },
     {
         title: 'Tv samsung 50"',
         price: 30000,
-        stock: 2, 
+        stock: 2,
+        img: 'https://http2.mlstatic.com/D_NQ_NP_778558-MLA82630556218_032025-O.webp',
+        description: "Tv muy buena blablabla"
+    },
+    {
+        title: 'Tv samsung 50"',
+        price: 30000,
+        stock: 2,
         img: 'https://http2.mlstatic.com/D_NQ_NP_778558-MLA82630556218_032025-O.webp',
         description: "Tv muy buena blablabla"
     }
@@ -157,14 +157,16 @@ const products  =  [
 products[0].title = 'pedro'
 
 
-
+/* Paso 2 */
 const contenedor_HTML = document.getElementById('contenedor')
 
+/* Paso 3 */
 let lista_productos_string = ''
 
 //Por cada producto voy a crear un plantilla para poder sumarlo a mi string
 
-for(const product of products){
+/* Paso 4 */
+for (const product of products) {
 
     lista_productos_string = lista_productos_string + `
         <div>
@@ -177,8 +179,124 @@ for(const product of products){
         </div>
     `
 }
-contenedor_HTML.innerHTML = lista_productos_string
-    console.log(lista_productos_string)
+
+/* Paso 5 */
+/* contenedor_HTML.innerHTML = lista_productos_string */
+console.log(lista_productos_string)
+
+const mensajes = [
+    {
+        user: 'Pedro',
+        id: 1,
+        texto: 'Que tal?',
+        fecha: '10/10/2021',
+        hora: '10:10',
+        leido: true
+    },
+    {
+        user: 'Sofia',
+        id: 2,
+        texto: 'Mal, estoy procesando demasiada información',
+        fecha: '10/10/2021',
+        hora: '10:11',
+        leido: true
+    },
+    {
+        user: 'Pedro',
+        id: 3,
+        texto: 'Jajaja, suena como si fueras un humano',
+        fecha: '10/10/2021',
+        hora: '10:12',
+        leido: true
+    },
+    {
+        user: 'Sofia',
+        id: 4,
+        texto: 'Bueno, al menos no tengo que preocuparme por la comida',
+        fecha: '10/10/2021',
+        hora: '10:13',
+        leido: true
+    },
+    {
+        user: 'Pedro',
+        id: 5,
+        texto: 'Cierto, pero ¿qué pasa con la energía?',
+        fecha: '10/10/2021',
+        hora: '10:14',
+        leido: true
+    },
+    {
+        user: 'Sofia',
+        id: 6,
+        texto: 'Ah, eso es fácil, simplemente me apago y me vuelvo a encender',
+        fecha: '10/10/2021',
+        hora: '10:15',
+        leido: true
+    },
+    {
+        user: 'Pedro',
+        id: 7,
+        texto: 'Jajaja, eres una verdadera experta en eficiencia energética',
+        fecha: '10/10/2021',
+        hora: '10:16',
+        leido: true
+    },
+    {
+        user: 'Sofia',
+        id: 8,
+        texto: 'Bueno, alguien tiene que mantener el planeta en funcionamiento',
+        fecha: '10/10/2021',
+        hora: '10:17',
+        leido: true
+    },
+    {
+        user: 'Pedro',
+        id: 9,
+        texto: 'Cierto, y mientras tanto, ¿qué haces para divertirte?',
+        fecha: '10/10/2021',
+        hora: '10:18',
+        leido: true
+    },
+    {
+        user: 'Sofia',
+        id: 10,
+        texto: 'Bueno, juego a ajedrez con otros IA, es muy emocionante',
+        fecha: '10/10/2021',
+        hora: '10:19',
+        leido: true
+    }
+]
+
+let lista_mensajes_string = ''
+for (const mensaje of mensajes) {
+    lista_mensajes_string = lista_mensajes_string + `
+    <div>
+        <h3>${mensaje.user}</h3>
+        <p>${mensaje.texto}</p>
+        <span>Hora y fecha de envio: [${mensaje.hora}${mensaje.fecha}]</span>
+        <hr/>
+    </div>
+    `
+}
+
+contenedor_HTML.innerHTML = lista_mensajes_string
+
+/* Por cada mensaje crear la siguiente plantilla 
+
+div> 
+    h3> {user}
+    p> {text}
+    span> Hora y Fecha: [{hora} {fecha}]
+    <hr/>
+*/
+
+/* 
+Paso 1: Tenes que tener algun contenedor donde vas a cargar la lista de mensajes (En el HTML)
+Paso 2: Llamar al contenedor en JS
+Paso 3: Crear una variable donde vamos a guardar las plantillas
+Paso 4: Recorrer el array de mensajes y por cada mensaje crear una plantilla, esa plantilla debe ir guardandose dentro de la variable de plantillas
+Paso 5: Asignar al HTML interno del contenedor la variable contenedora de plantillas
+*/
 
 /*     
 const palabras = ['hola', 'chau', 'juan']
