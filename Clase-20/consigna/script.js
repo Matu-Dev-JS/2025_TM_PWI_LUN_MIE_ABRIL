@@ -133,12 +133,28 @@ function renderMessages (){
     messages_HTML.innerHTML = messages_string_html
 }
 
-function handleSubmitNewMessage (){
+function handleSubmitNewMessage (event){
+    // Para prevenir que se recargue la pagina al enviar un form (ES EL COMPORTAMIENTO POR DEFECTO DE UN FORM)
+    event.preventDefault()
+    
     //Capturen el texto del mensaje
+    let mensaje = event.target.mensaje.value;
+
     //creen un nuevo objeto de mensaje EJ: {id: 1, user: 'YO', texto: (el texto que escribio en el form), fecha: '10/10/2022', hora: '10:19', leido: false}
+    const mensaje_enviado = {
+        id: 1, 
+        user: 'YO', 
+        texto: mensaje, 
+        fecha: '18/06/2025',
+        hora: '10:19', 
+        leido: false
+    };
+
     //Agregar el objeto a la lista de mensajes
+    mensajes.push(mensaje_enviado);
+
     //Como la lista cambio hay que volver a renderizar la lista (usa la funcion renderMessages())
-    alert('hola')
+    renderMessages()
 }
 
 renderMessages()
