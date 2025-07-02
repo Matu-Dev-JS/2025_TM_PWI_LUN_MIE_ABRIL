@@ -36,16 +36,29 @@ const App = () => {
 	)
 }
 
-const MessagesList = ({messages}) => {
-	/* Aca iria el mapeo */
+const MessagesList = ({ messages }) => {
+  const lista_mensajes = messages.map(
+    function (message) {
+        return <Message 
+			emisor={message.emisor} 
+			hora={message.hora} 
+			id={message.id} 
+			texto={message.texto} 
+			status={message.status}
+		/>
+    }
+	)
 	return (
-		<div></div>
+		<div>
+			{lista_mensajes}
+		</div>
 	)
 }
 const Message = ({emisor, hora, id, texto, status}) => {
 	return (
 		<div>
-			{/* Aca deben hacer el mensaje */}
+			<p>{texto}</p>
+			<span>{hora}</span>
 		</div>
 	)
 }

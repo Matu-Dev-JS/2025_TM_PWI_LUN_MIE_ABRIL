@@ -1,5 +1,5 @@
 import ProductCard from "../ProductCard/ProductCard"
-
+import './ProductList.css'
 
 const ProductList = () => {
     const productos = [
@@ -30,7 +30,7 @@ const ProductList = () => {
         }
     )
     return (
-        <div>
+        <div className="contenedor-productos">
             {lista_productos}
         </div>
     )
