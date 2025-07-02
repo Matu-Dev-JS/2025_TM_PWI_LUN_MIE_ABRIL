@@ -8,9 +8,9 @@
   //el array resultante sera un array donde cada elemento sera el retorno de la callback
 
 const resultado = productos.map(
-/* Funcion anonima */ function(producto){
+  (producto) => {
     console.log('hola ' + producto.nombre)
     return producto.nombre
-}
+  }
 )
 console.log(resultado)

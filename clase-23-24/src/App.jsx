@@ -1,52 +1,39 @@
-import React from 'react'
-import ProductCard from './Components/ProductCard/ProductCard'
+import React, {useState} from 'react'
 
-/* El componente App es el componente principal de la aplicacion */
-function App() {
-  const secciones = [
-    {
-      titulo: 'Migracion de sitios',
-      img: 'http//url.png',
-      text: 'lorem ipsum'
-    }
-  ]
-  //mook de datos
+const App = () => {
 
-  const productos = [
-    {
-      nombre: 'cuchara metalica',
-      precio: 1000,
-      id: 1
-    },
-    {
-      nombre: 'cuchara plastica',
-      precio: 500,
-      id: 2
-    },
-    {
-      nombre: 'cuchara de plata',
-      precio: 6000,
-      id: 3
-    }
-  ]
-  const lista_productos = productos.map(
-    function(producto){
-      return (
-        <ProductCard 
-          nombre={producto.nombre}
-          precio={producto.precio}
-        />
-      )
-    }
-  )
-  
+	const messages = [
+		{
+			emisor: 'YO',
+			hora: '23:10',
+			id: 1,
+			texto: 'Hola',
+			status: 'visto'
+		},
+		{
+			emisor: 'OTRO',
+			hora: '23:11',
+			id: 2,
+			texto: 'Hola que tal?',
+			status: 'visto'
+		},
+		{
+			emisor: 'YO',
+			hora: '23:12',
+			id: 3,
+			texto: 'Todo esta bien?',
+			status: 'visto'
+		}
+	]
 
-  return (
-    <div>
-      {lista_productos}
-    </div>
-
-  )
+	
+	return (
+		<div>
+			<button onClick={decrementar}>-</button>
+			<span>{contador}</span>
+			<button onClick={incrementar}>+</button>
+		</div>
+	)
 }
 
 export default App
