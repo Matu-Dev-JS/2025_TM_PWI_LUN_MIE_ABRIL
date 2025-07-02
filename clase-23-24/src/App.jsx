@@ -25,13 +25,27 @@ const App = () => {
 			status: 'visto'
 		}
 	]
+	/* Renderizen una lista de mensajes, cada mensaje sera un componente llamado <Message/> y la lista (el map) debe estar en componente llamado <MessageList/> */
 
 	
 	return (
 		<div>
-			<button onClick={decrementar}>-</button>
-			<span>{contador}</span>
-			<button onClick={incrementar}>+</button>
+			<h1>Mensajes:</h1>
+			<MessagesList messages={messages}/>
+		</div>
+	)
+}
+
+const MessagesList = ({messages}) => {
+	/* Aca iria el mapeo */
+	return (
+		<div></div>
+	)
+}
+const Message = ({emisor, hora, id, texto, status}) => {
+	return (
+		<div>
+			{/* Aca deben hacer el mensaje */}
 		</div>
 	)
 }
