@@ -14,3 +14,27 @@ const resultado = productos.map(
   }
 )
 console.log(resultado)
+
+
+const galletas = [
+        {
+            id: 1,
+            nombre: 'Galletita normal'
+        },
+        {
+            id: 2,
+            nombre: 'Galletita premiun'
+        }
+    ]
+
+    const galletas_con_chips_de_chocolate = galletas.map(
+        (galleta) => {
+            return {
+                id: galleta.id,
+                nombre: galleta.nombre,
+                chips_de_chocolate: true
+            }
+        }
+    )
+
+    console.log(galletas_con_chips_de_chocolate)

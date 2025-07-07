@@ -1,4 +1,7 @@
 import React, {useState} from 'react'
+import MessagesList from './Components/MessagesList/MessagesList'
+import ColorCardPalette from './Components/CardColorPalette/CardColorPalette'
+import ColorCardPaletteList from './Components/ColorCardPaletteList/ColorCardPaletteList'
 
 const App = () => {
 
@@ -32,35 +35,17 @@ const App = () => {
 		<div>
 			<h1>Mensajes:</h1>
 			<MessagesList messages={messages}/>
+
+			<ColorCardPaletteList colors={[
+				{likes: 9, time: '58 minutes', colors: ['#1B3C53', '#456882','#D2C1B6', '#F9F3EF']},
+				{likes: 9, time: '58 minutes', colors: ['#748873', '#D1A980','#E5E0D8', '#F8F8F8']},
+				{likes: 9, time: '58 minutes', colors: ['#5EABD6', '#FEFBC7','#FFB4B4', '#E14434']},
+			]}/>
 		</div>
 	)
 }
 
-const MessagesList = ({ messages }) => {
-  const lista_mensajes = messages.map(
-    function (message) {
-        return <Message 
-			emisor={message.emisor} 
-			hora={message.hora} 
-			id={message.id} 
-			texto={message.texto} 
-			status={message.status}
-		/>
-    }
-	)
-	return (
-		<div>
-			{lista_mensajes}
-		</div>
-	)
-}
-const Message = ({emisor, hora, id, texto, status}) => {
-	return (
-		<div>
-			<p>{texto}</p>
-			<span>{hora}</span>
-		</div>
-	)
-}
+
+
 
 export default App
