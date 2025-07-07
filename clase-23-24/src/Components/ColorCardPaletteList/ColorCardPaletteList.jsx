@@ -12,7 +12,7 @@ const ColorCardPaletteList = ({ colors }) => {
             {
                 colors.map(
                     (colorCardInfo) => {
-                        return <ColorCardPalette likes={colorCardInfo.likes} time={colorCardInfo.time} colors={colorCardInfo.colors} />
+                        return <ColorCardPalette key={colorCardInfo.id} likes={colorCardInfo.likes} time={colorCardInfo.time} colors={colorCardInfo.colors} />
                     }
                 )
             }

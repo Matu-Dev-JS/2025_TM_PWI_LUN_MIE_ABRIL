@@ -5,6 +5,7 @@ const MessagesList = ({ messages }) => {
   const lista_mensajes = messages.map(
     function (message) {
         return <Message 
+			key={message.id}
 			emisor={message.emisor} 
 			hora={message.hora} 
 			id={message.id} 

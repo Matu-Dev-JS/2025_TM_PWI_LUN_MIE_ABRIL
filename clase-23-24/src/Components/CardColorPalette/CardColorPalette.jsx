@@ -7,9 +7,9 @@ const ColorCardPalette = ({ likes, time, colors }) => {
     
     /* Las listas de JSX en react se imprimen directamente */
     const colors_list_jsx = colors.map(
-        (color) => {
+        (color, indice) => {
             return (
-            <div className='color' style={ { backgroundColor: color } } title={`Color: ${color}`}>
+            <div className='color' style={ { backgroundColor: color } } title={`Color: ${color}`} key={indice + color}>
                 <span>{color}</span>{/* Texto que se ve dentro del color */}
             </div>
             )
