@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import MessagesList from '../../Components/MessagesList/MessagesList'
+import NewMessageForm from '../../Components/NewMessageForm/NewMessageForm'
 
 const messages_servidor = [
 	{
@@ -38,14 +39,27 @@ const ChatScreen = () => {
 		setMessages(new_message_list)
 	}
 
-	const addNewMessage = (new_message) => {
-		/* Agrege el nuevo mensaje al estado */
+	const addNewMessage = (text) => {
+		
+		const new_mesage = {
+			emisor: 'YO',
+			hora: '11:10', //Investigar acerca de Date.
+			texto: text,
+			status: 'no-visto',
+			id: messages.length + 1
+		}
+		//Clonar la lista de mensajes (Porque: El clon al ser otra variable PERO NO UN ESTADO si lo vamos a poder mutar)
+		const cloned_messages_list = [...messages]
+		//Este push es valido porque no estamos mutando en estado 'messages' sino mas bien el clon de ese estado
+		cloned_messages_list.push(new_mesage)
+		setMessages(cloned_messages_list)
 	}
 
 	const deleteAllMessages = () => {
 		setMessages([])
 	}
 
+	
     return (
         <div>
             <h1>Mensajes:</h1>
@@ -57,7 +71,7 @@ const ChatScreen = () => {
 			}
 
 			<MessagesList messages={messages} deleteMessageById={deleteMessageById} />
-
+			<NewMessageForm addNewMessage={addNewMessage}/>
         </div>
     )
 }
