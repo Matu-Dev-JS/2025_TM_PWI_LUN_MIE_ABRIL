@@ -26,23 +26,10 @@ const messages_servidor = [
 ]
 
 const ChatScreen = () => {
-	/* 
-	useState: Crea estados
-	parametro de useState: El valor de mi estado inicial
-	messages: Variable que guarda el valor de mi estado
-	setMessages: Funcion para actualizar el estado de mensajes
-
-	REGLAS: 
-	- Son inmutables, no podemos cambiarlos de valor ESTO NO SE PUEDE: messages.push('hola'), messages.splice(1, 1) (push, shift, unshift, pop y splice SON MUTABLES)
-	*/
     const [messages, setMessages] = useState(messages_servidor)
 
 	const deleteMessageById = (message_id) => {
-		/* Logica para actualizar el estado de mensajes eliminando el mensaje con el id recibido */
 		const new_message_list = []
-
-		/* Recorrer la lista de mensajes (estado) y agregar a los mensajes que sean de id distinto al id recibido */
-		//Pueden usar .filter() (INVESTIGAR)
 		for(const message of messages){
 			if(message.id !== message_id){
 				new_message_list.push(message)
@@ -50,14 +37,31 @@ const ChatScreen = () => {
 		} 
 		setMessages(new_message_list)
 	}
-	
+
+	const addNewMessage = (new_message) => {
+		/* Agrege el nuevo mensaje al estado */
+	}
+
+	const deleteAllMessages = () => {
+		setMessages([])
+	}
+
     return (
         <div>
-			<button onClick={() => deleteMessageById(1)}>Eliminar primer mensaje</button>
             <h1>Mensajes:</h1>
-			<MessagesList messages={messages}/>
+
+			{
+				messages.length > 0
+				&&
+				<button onClick={deleteAllMessages}>Borrar todos los mensajes</button>
+			}
+
+			<MessagesList messages={messages} deleteMessageById={deleteMessageById} />
+
         </div>
     )
 }
+
+
 
 export default ChatScreen
