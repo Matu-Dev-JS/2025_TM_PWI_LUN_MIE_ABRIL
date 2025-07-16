@@ -1,33 +1,34 @@
 import React, { useState } from 'react'
 import MessagesList from '../../Components/MessagesList/MessagesList'
 import {NewMessageForm} from '../../Components/NewMessageForm/NewMessageForm'
+import { useParams } from 'react-router'
+import { getContactById } from '../../services/contactService'
 
-const messages_servidor = [
-	{
-		emisor: 'YO',
-		hora: '23:10',
-		id: 1,
-		texto: 'Hola',
-		status: 'visto'
-	},
-	{
-		emisor: 'OTRO',
-		hora: '23:11',
-		id: 2,
-		texto: 'Hola que tal?',
-		status: 'visto'
-	},
-	{
-		emisor: 'YO',
-		hora: '23:12',
-		id: 3,
-		texto: 'Todo esta bien?',
-		status: 'visto'
-	}
-]
 
 const ChatScreen = () => {
-    const [messages, setMessages] = useState(messages_servidor)
+
+	/* 
+	Paso 1: Obtener el contact_id de la url
+	Paso 2: Buscar el contact por su contact_id
+	Paso 3: Cargar el contact.messages al estado de mensajes
+	*/
+	
+	/* Paso 1: */
+	/* 
+	useParams() es una funcion que retorna un objeto con los parametros de busqueda de ese momento 
+	Siempre retorna un objeto y el tipo de dato de valor de cada parametro de busqueda siempre sera un string
+	Ejemplo: /contact/:contact_id/messages
+	URL ejemplo: /contact/1/messages
+	useParams() devolvera {contact_id: '1'}
+
+	*/
+	const {contact_id} = useParams()
+
+	/* Paso 2: */
+	const contact_selected = getContactById(contact_id)
+
+	/* Paso 3: */
+    const [messages, setMessages] = useState(contact_selected.messages)
 
 	const deleteMessageById = (message_id) => {
 		const new_message_list = []

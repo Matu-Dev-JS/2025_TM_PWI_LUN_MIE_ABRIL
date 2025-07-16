@@ -9,11 +9,11 @@ const ContactScreen = () => {
     const contacts = getContactList()
     const [contactsState, setContactsState] = useState(contacts);
 
-  return (
-    <div>
-      <ContactList contacts={contactsState} />
-    </div>
-  );
+    return (
+        <div>
+            <ContactList contacts={contactsState} />
+        </div>
+    );
 };
 
 export default ContactScreen;
