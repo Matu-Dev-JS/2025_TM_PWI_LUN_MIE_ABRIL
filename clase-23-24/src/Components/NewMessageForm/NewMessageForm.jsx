@@ -22,4 +22,4 @@ const NewMessageForm = ({addNewMessage}) => {
     )
 }
 
-export default NewMessageForm
+export {NewMessageForm}

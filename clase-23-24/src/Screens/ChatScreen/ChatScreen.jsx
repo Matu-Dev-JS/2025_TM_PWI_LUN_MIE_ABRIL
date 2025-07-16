@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import MessagesList from '../../Components/MessagesList/MessagesList'
-import NewMessageForm from '../../Components/NewMessageForm/NewMessageForm'
+import {NewMessageForm} from '../../Components/NewMessageForm/NewMessageForm'
 
 const messages_servidor = [
 	{
